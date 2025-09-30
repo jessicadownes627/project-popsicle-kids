@@ -46,7 +46,6 @@ const Events = () => {
   const { selectedTopics = [], kidName = "you" } = location.state || {};
 
   const [magicIndex, setMagicIndex] = useState(0);
-
   const magicDeck = [...bonusIdeas, ...sparkQuestions];
 
   const shuffleMagic = () => {
@@ -131,6 +130,28 @@ const Events = () => {
         >
           ✨ Shuffle ✨
         </button>
+      </section>
+
+      {/* 🏡 Featured Local Fun */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-white mb-4">🏡 Featured Local Fun</h2>
+        <div className="bg-white/90 rounded-xl p-4 shadow-md flex flex-col sm:flex-row items-center gap-4">
+          <img
+            src="/assets/aLatteFun.jpg" // drop the image into /public/assets/
+            alt="A Latte Fun Play Café"
+            className="w-full sm:w-48 h-40 object-cover rounded-lg"
+          />
+          <div>
+            <h3 className="font-bold text-lg mb-1">☕ A Latte Fun — Hauppauge</h3>
+            <p className="text-sm">
+              A cozy indoor play café for kids and parents — perfect for playdates,
+              rainy days, or after-school adventures!
+            </p>
+            <p className="text-xs italic mt-1 text-gray-600">
+              (More info in Parent Settings)
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* 🔗 Parent Links */}
