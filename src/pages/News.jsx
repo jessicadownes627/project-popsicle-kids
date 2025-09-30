@@ -1,7 +1,8 @@
 // src/pages/News.jsx
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import curatedNewsByTopic from "../data/curatedNewsByTopic.js";
+import topicLabelMap from "../data/topicLabelMap.js"; // 🧠 Added this!
 
 const panelColors = [
   "bg-yellow-200 border-yellow-500",
@@ -17,6 +18,9 @@ const News = () => {
   const { selectedTopics = [], kidName = "you", ageGroup = "5-7" } =
     location.state || {};
 
+  // Track which accordion is open
+  const [openTopic, setOpenTopic] = useState(selectedTopics[0] || null);
+
   const handleBack = () =>
     navigate("/talktips", { state: { kidName, ageGroup, selectedTopics } });
 
@@ -26,8 +30,10 @@ const News = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-300 via-yellow-200 to-pink-300 text-[#0a2540] p-6">
       {/* Title */}
-      <h1 className="text-5xl sm:text-6xl font-extrabold text-center mb-3 tracking-tight 
-        drop-shadow-[4px_4px_#000000] text-white bg-[#0a2540] inline-block px-4 py-2 rounded-xl shadow-xl">
+      <h1
+        className="text-5xl sm:text-6xl font-extrabold text-center mb-3 tracking-tight 
+        drop-shadow-[4px_4px_#000000] text-white bg-[#0a2540] inline-block px-4 py-2 rounded-xl shadow-xl"
+      >
         📰 Today’s Cool News!
       </h1>
 
@@ -36,56 +42,73 @@ const News = () => {
         <p className="text-center text-lg bg-white border-4 border-black rounded-3xl p-4 shadow-[4px_4px_0px_#000]">
           {kidName}, here are some amazing stories to share!
         </p>
-        {/* Speech bubble tail */}
         <div className="absolute left-1/2 -bottom-4 -translate-x-1/2 w-6 h-6 bg-white border-b-4 border-r-4 border-black rotate-45"></div>
       </div>
 
-      {/* Comic-style panels */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Accordion Panels */}
+      <div className="space-y-4 max-w-2xl mx-auto">
         {selectedTopics.map((topic, topicIndex) => {
+          // 🧠 Normalize topic key before label lookup
+          const cleanTopic = topic?.trim().replace(/\s+/g, "");
+          const label =
+            topicLabelMap[cleanTopic] ||
+            topicLabelMap[cleanTopic.toLowerCase()] ||
+            topic;
+
           const stories = curatedNewsByTopic?.[ageGroup]?.[topic];
+          const colorClass = panelColors[topicIndex % panelColors.length];
 
-          if (!stories || stories.length === 0) {
-            const colorClass =
-              panelColors[topicIndex % panelColors.length] || panelColors[0];
-            return (
-              <div
-                key={topic}
-                className={`rounded-2xl p-4 border-4 shadow-[6px_6px_0px_#000] comic-panel text-center transform hover:-rotate-1 hover:scale-105 transition ${colorClass}`}
-              >
-                <h3 className="text-xl font-extrabold mb-2 drop-shadow-[2px_2px_#fff]">
-                  {topic}
-                </h3>
-                <p className="italic text-sm">No stories here yet… stay tuned!</p>
+          return (
+            <details
+              key={topic}
+              open={openTopic === topic}
+              onClick={() =>
+                setOpenTopic(openTopic === topic ? null : topic)
+              }
+              className={`rounded-2xl border-4 shadow-[6px_6px_0px_#000] ${colorClass}`}
+            >
+              <summary className="cursor-pointer font-bold text-lg px-4 py-3 flex items-center justify-between group">
+                <span className="flex items-center gap-2">
+                  📰 {label}
+                </span>
+                <span
+                  className="text-sm font-semibold italic text-gray-700 opacity-80 transition duration-300
+                             group-hover:opacity-100 group-hover:playful-wiggle"
+                >
+                  (tap to open)
+                </span>
+              </summary>
+
+              <div className="px-4 pb-4 space-y-4">
+                {(!stories || stories.length === 0) && (
+                  <p className="italic text-sm">
+                    No stories here yet… stay tuned!
+                  </p>
+                )}
+
+                {stories?.map((story, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-3 rounded-xl border-2 border-black shadow-[3px_3px_0px_#000]"
+                  >
+                    <h3 className="font-extrabold text-lg mb-1">
+                      {story.title}
+                    </h3>
+                    <p className="mb-2 text-sm">{story.summary}</p>
+
+                    <div className="bg-yellow-50 border-2 border-black rounded-lg p-2 mb-2 text-sm font-semibold shadow-[2px_2px_0px_#000]">
+                      💡 <span className="font-bold">Why it’s cool:</span>{" "}
+                      {story.whyCool}
+                    </div>
+
+                    <div className="bg-gray-100 border-2 border-black rounded-lg p-2 text-sm italic shadow-[2px_2px_0px_#000]">
+                      👉 {story.fallback}
+                    </div>
+                  </div>
+                ))}
               </div>
-            );
-          }
-
-          return stories.map((story, index) => {
-            const colorClass =
-              panelColors[(topicIndex + index) % panelColors.length] ||
-              panelColors[0];
-            return (
-              <div
-                key={`${topic}-${index}`}
-                className={`rounded-2xl p-4 border-4 shadow-[6px_6px_0px_#000] transform hover:-rotate-1 hover:scale-105 transition ${colorClass}`}
-              >
-                <h3 className="text-xl font-extrabold mb-2 drop-shadow-[2px_2px_#fff]">
-                  {story.title}
-                </h3>
-                <p className="mb-3 text-base font-medium">{story.summary}</p>
-
-                <div className="bg-white border-2 border-black rounded-xl p-2 mb-2 text-sm font-semibold shadow-[2px_2px_0px_#000]">
-                  💡 <span className="font-bold">Why it’s cool:</span>{" "}
-                  {story.whyCool}
-                </div>
-
-                <div className="bg-white border-2 border-black rounded-xl p-2 text-sm italic shadow-[2px_2px_0px_#000]">
-                  👉 {story.fallback}
-                </div>
-              </div>
-            );
-          });
+            </details>
+          );
         })}
       </div>
 
@@ -109,6 +132,7 @@ const News = () => {
 };
 
 export default News;
+
 
 
 

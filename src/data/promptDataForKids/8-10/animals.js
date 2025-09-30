@@ -1,4 +1,6 @@
-const petsAndAnimalCare = [
+// src/data/promptDataForKids/8-10/animals.js
+
+const animals = [
   {
     summary: "Dream Pets",
     fact: "Some people have pets like hedgehogs, parrots, or even mini pigs!",
@@ -31,4 +33,4 @@ const petsAndAnimalCare = [
   }
 ];
 
-export default petsAndAnimalCare;
+export default animals;

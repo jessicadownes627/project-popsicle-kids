@@ -7,7 +7,7 @@ import inventionsAndGadgets from "./inventionsAndGadgets.js";
 import magicAndMyths from "./magicAndMyths.js";
 import minecraft from "./minecraft.js";
 import oceanCreatures from "./oceanCreatures.js";
-import petsAndAnimalCare from "./petsAndAnimalCare.js";
+import animals from "./animals.js";
 import puzzlesAndRiddles from "./puzzlesAndRiddles.js";
 import roblox from "./roblox.js";
 import spaceExplorers from "./spaceExplorers.js";
@@ -16,6 +16,7 @@ import superheroes from "./superheroes.js";
 import videoGames from "./videoGames.js";
 
 export default {
+  animals,
   artAndCreativity,
   awesomePlaces,
   comicsAndBooks,
@@ -25,7 +26,6 @@ export default {
   magicAndMyths,
   minecraft,
   oceanCreatures,
-  petsAndAnimalCare,
   puzzlesAndRiddles,
   roblox,
   spaceExplorers,

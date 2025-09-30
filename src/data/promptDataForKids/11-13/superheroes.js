@@ -1,6 +1,6 @@
 // src/data/promptDataForKids/11-13/superheroes.js
 
-export default [
+const superheroes = [
   {
     summary: "Superheroes often reflect real-world issues like justice and responsibility.",
     fact: "Spider-Man’s motto 'With great power comes great responsibility' is studied in schools.",
@@ -32,3 +32,5 @@ export default [
     open: "What science or tech from superheroes would you most want to exist?"
   }
 ];
+
+export default superheroes;

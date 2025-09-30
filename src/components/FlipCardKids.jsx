@@ -27,29 +27,32 @@ const FlipCardKids = ({ data, topic, bgClass }) => {
           <p className="mt-3 text-sm italic text-gray-700">✨ Tap to flip!</p>
         </div>
 
-        {/* Back Side */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden">
-          <div
-            className={`w-full h-full bg-white p-4 rounded-xl border-4 ${borderClass}`}
-          >
-            <h4 className="font-semibold mb-2">{topic}</h4>
-            <p className="mb-1">
-              <strong>🧠 Fun Fact:</strong> {data.fact}
-            </p>
-            <p className="mb-1">
-              <strong>❓ Try This:</strong> {data.ask}
-            </p>
-            <p>
-              <strong>💬 Let’s Talk More:</strong> {data.open}
-            </p>
+  {/* Back Side */}
+<div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden">
+  <div
+    className={`w-full h-full bg-white p-4 rounded-xl border-4 ${borderClass}`}
+  >
+    <h4 className="font-semibold mb-4 text-center">{topic}</h4>
 
-            {data.answer && (
-              <p className="mt-2 text-green-700 font-medium">
-                ✅ Answer: {data.answer}
-              </p>
-            )}
-          </div>
-        </div>
+    <p className="mb-4">
+      <strong>🧠 Fun Fact:</strong> {data.fact}
+    </p>
+    <p className="mb-4">
+      <strong>❓ Try This:</strong> {data.ask}
+    </p>
+    <p className="mb-4">
+      <strong>💬 Let’s Talk More:</strong> {data.open}
+    </p>
+
+    {data.answer && (
+      <p className="mt-4 text-green-700 font-medium">
+        ✅ Answer: {data.answer}
+      </p>
+    )}
+  </div>
+</div>
+
+
       </div>
     </div>
   );

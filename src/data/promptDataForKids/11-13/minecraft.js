@@ -1,6 +1,6 @@
 // src/data/promptDataForKids/11-13/minecraft.js
 
-export default [
+const minecraft = [
   {
     summary: "Minecraft has been used to teach history, math, and even coding.",
     fact: "Some schools run entire classes inside Minecraft worlds.",
@@ -62,3 +62,5 @@ export default [
     open: "If you were in charge of the next Minecraft update, what would its name and theme be?"
   }
 ];
+
+export default minecraft;

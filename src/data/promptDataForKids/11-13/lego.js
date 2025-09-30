@@ -1,6 +1,6 @@
 // src/data/promptDataForKids/11-13/lego.js
 
-export default [
+const lego = [
   {
     summary: "LEGO isn’t just toys — architects use it to model real buildings.",
     fact: "Some universities run entire design labs with LEGO bricks.",
@@ -32,3 +32,5 @@ export default [
     open: "What’s the most creative use of a single LEGO brick you can imagine?"
   }
 ];
+
+export default lego;

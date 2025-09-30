@@ -4,9 +4,10 @@ import Topics from "./pages/Topics";
 import Events from "./pages/Events";
 import TalkTips from "./pages/TalkTips";
 import News from "./pages/News";
-import Parent from "./pages/Parent";              
-import ParentSettings from "./pages/ParentSettings"; 
+import Parent from "./pages/Parent";
+import ParentSettings from "./pages/ParentSettings";
 import ParentNews from "./pages/ParentNews";
+import ParentEvents from "./pages/ParentEvents"; // 👈 NEW
 import Glossary from "./pages/Glossary";
 
 function App() {
@@ -21,9 +22,10 @@ function App() {
         <Route path="/events" element={<Events />} />
 
         {/* Parent flow */}
-        <Route path="/parent" element={<Parent />} /> 
-        <Route path="/parent-settings" element={<ParentSettings />} /> 
-        <Route path="/parent-news" element={<ParentNews />} /> 
+        <Route path="/parent" element={<Parent />} />
+        <Route path="/parent-settings" element={<ParentSettings />} />
+        <Route path="/parent-news" element={<ParentNews />} />
+        <Route path="/parent-events" element={<ParentEvents />} /> {/* ✅ Added */}
         <Route path="/glossary" element={<Glossary />} />
       </Routes>
     </Router>

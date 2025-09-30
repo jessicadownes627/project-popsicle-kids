@@ -1,6 +1,6 @@
 // src/data/promptDataForKids/11-13/roblox.js
 
-export default [
+const roblox = [
   {
     summary: "Roblox isn’t just games — it’s a platform where anyone can build.",
     fact: "Over 40 million games have been created by users on Roblox.",
@@ -62,3 +62,6 @@ export default [
     open: "What rules or advice would you give to make Roblox a better place for everyone?"
   }
 ];
+
+export default roblox;
+

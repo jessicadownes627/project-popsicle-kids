@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import promptDataForKids from "../data/promptDataForKids/index.js";
+import promptDataForKids from "../data/promptDataForKids";
 import topicLabelMap from "../data/topicLabelMap.js";
 import FlipCardKids from "../components/FlipCardKids";
 import topicGradients, { fallbackGradient } from "../data/topicGradients.js";
-
-
 
 const TalkTips = () => {
   const navigate = useNavigate();
@@ -35,23 +33,11 @@ const TalkTips = () => {
     setShuffledPrompts(newPrompts);
   };
 
-  const handleBack = () =>
-    navigate("/topics", { state: { kidName, ageGroup } });
-
+  const handleBack = () => navigate("/topics", { state: { kidName, ageGroup } });
   const handleForward = () =>
     navigate("/news", { state: { kidName, ageGroup, selectedTopics } });
-
   const handleGlossary = () =>
     navigate("/glossary", { state: { kidName, ageGroup, selectedTopics } });
-
-  // figure out which group each topic belongs to
-  const getGroupForTopic = (topic) => {
-    const allGroups = promptDataForKids?.[ageGroup] || {};
-    for (let [groupName, groupTopics] of Object.entries(allGroups)) {
-      if (groupTopics[topic]) return groupName;
-    }
-    return "Other";
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-sky-100 to-pink-100 p-6 text-[#0a2540]">
@@ -72,19 +58,21 @@ const TalkTips = () => {
                 key={topic}
                 className="bg-white bg-opacity-80 border border-yellow-300 rounded-xl p-4 shadow text-center"
               >
-                <h3 className="text-lg font-bold mb-2">{topic}</h3>
+                <h3 className="text-lg font-bold mb-2">
+                  {topicLabelMap[topic] || topic}
+                </h3>
                 <p className="mb-1 italic">Oops! No prompts found for this topic.</p>
               </div>
             );
           }
 
           return (
-         <FlipCardKids
-  key={topic}
-  topic={topicLabelMap[topic] || topic}
-  data={shuffledPrompts[topic]}
-  bgClass={topicGradients[topic] || fallbackGradient}
-/>
+            <FlipCardKids
+              key={topic}
+              topic={topicLabelMap[topic] || topic}
+              data={data}
+              bgClass={topicGradients[topic] || fallbackGradient}
+            />
           );
         })}
       </div>
