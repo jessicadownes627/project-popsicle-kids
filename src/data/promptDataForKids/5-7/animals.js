@@ -23,7 +23,7 @@ const animals = [
     ask: "Would you rather fly like a bird or swim like a penguin?",
     open: "Where would you waddle to if you lived in the snow?"
   },
-  {
+  {   
     summary: "Animal Chat",
     fact: "Dolphins call each other by name with special whistles!",
     ask: "What animal would you want to talk to?",

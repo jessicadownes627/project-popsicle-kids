@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
   content: [
     "./index.html",
@@ -11,5 +11,14 @@ export default {
       },
     },
   },
+  safelist: [
+    "border-purple-400",
+    "border-pink-400",
+    "border-yellow-300",
+    "border-green-400",
+    "border-blue-400",
+    "border-red-400",
+    "border-indigo-400",
+  ],
   plugins: [],
 }

@@ -1,3 +1,5 @@
+// src/data/topicEmojis.js
+
 const topicEmojis = {
   // 🧒 Ages 5–7
   animals: "🐘",
@@ -46,7 +48,8 @@ const topicEmojis = {
   spaceAndTheUniverse: "🌌",
   sports: "🏀",
   techAndFuture: "🤖",
-  worldCultures: "🌍"
+  worldCultures: "🌍",
+  lego: "🧱" // ➕ added for 11–13
 };
 
 export default topicEmojis;

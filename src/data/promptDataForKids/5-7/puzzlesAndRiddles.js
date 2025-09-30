@@ -14,6 +14,27 @@ const puzzlesAndRiddles = [
     answer: "🍕 — it’s food, the others are animals!"
   },
   {
+  summary: "Animal Detective",
+  fact: "Animals have special features that make great clues for riddles!",
+  ask: "I hoot at night, have big round eyes, and love trees. Who am I?",
+  open: "Can you make up a riddle about your favorite animal?",
+  answer: "An owl! 🦉"
+},
+{
+  summary: "Silly Rhyme Time",
+  fact: "Rhyming helps your brain remember words and make connections!",
+  ask: "What rhymes with 'cat' but isn’t an animal?",
+  open: "Can you think of 3 more funny rhyming pairs?",
+  answer: "Hat! 🎩 (Or bat, mat, sat... there are lots!)"
+},
+{
+  summary: "Emoji Sequence Puzzle",
+  fact: "Emojis can be used like pictures to make little stories or patterns!",
+  ask: "🍎🍎🍏🍎🍎🍏 … what comes next?",
+  open: "Can you make your own repeating pattern using emojis?",
+  answer: "🍎 — the red apple keeps the pattern going!"
+},
+  {
     summary: "Secret Code Time",
     fact: "Codes are secret ways to send messages — like switching letters or using pictures!",
     ask: "If 🐶 = D and 🐱 = C, what might 🐶🐱 spell?",

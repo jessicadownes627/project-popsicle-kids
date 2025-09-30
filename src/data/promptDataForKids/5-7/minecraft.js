@@ -31,6 +31,36 @@ const minecraft = [
     ask: ["Have you ever seen the Ender Dragon?"],
     open: ["If you were the boss in Minecraft, what challenge would players have to beat you?"]
   },
+  {
+    summary: "Minecraft isn’t just about blocks — you can make potions, enchant gear, and do magic too! ✨🧪",
+    fact: "Enchanting a sword can give it special powers like fire or knockback!",
+    ask: ["If you could enchant anything in Minecraft, what would it be?"],
+    open: ["Invent a silly new potion — what does it do and what’s it called?"]
+  },
+  {
+    summary: "You can build your dream house in Minecraft — from cozy cabins to giant mansions! 🏠🌈",
+    fact: "Some players build real-life landmarks, like the Eiffel Tower, block by block!",
+    ask: ["What kind of Minecraft house would you build — fancy, spooky, or silly?"],
+    open: ["Describe the secret room inside your dream Minecraft house!"]
+  },
+  {
+    summary: "Minecraft has friendly animals… and some spooky creatures too! 👻🧌",
+    fact: "Zombies burn in sunlight, but skeletons can shoot arrows from far away!",
+    ask: ["Which Minecraft mob is your favorite — or the scariest?"],
+    open: ["If you could invent your own Minecraft mob, what would it look like and what would it do?"]
+  },
+  {
+    summary: "In Minecraft Adventure Mode, you can go on quests and solve puzzles! 🗺️⛏️",
+    fact: "Some maps are like real games — with hidden secrets, traps, and treasures!",
+    ask: ["Would you rather explore a jungle temple, a desert pyramid, or an ice cave?"],
+    open: ["If you made your own adventure map, what would be the big surprise at the end?"]
+  },
+  {
+    summary: "Minecraft is even more fun with friends — you can build cities or go on quests together! 🧑‍🤝‍🧑🌍",
+    fact: "Some families build entire theme parks together in Minecraft!",
+    ask: ["Who do you like playing Minecraft with the most?"],
+    open: ["If you and your friends built a Minecraft amusement park, what would be the biggest ride?"]
+  }
 ];
 
 export default minecraft;

@@ -30,7 +30,20 @@ const turtles = [
     fact: "Pollution and plastic are big dangers to sea turtles today.",
     ask: "What do you think we can do to help turtles stay safe?",
     open: "Create a turtle superhero who protects the ocean. What's their name and power?"
-  }
-];
+    },
+    {
+       summary: "Turtles have been around since the time of the dinosaurs!",
+      fact: "A turtle’s shell is part of its skeleton — it’s like wearing your ribs on the outside.",
+      ask: "Would you want a shell you could hide inside? Why or why not?",
+      open: "If you could design a superhero turtle shell, what powers would it have?"
+      },
+      {
+      summary: "Turtles’ shells can come in different colors and patterns.",
+      fact: "A shell’s color can help a turtle camouflage and stay safe in its environment.",
+      ask: "If you had a turtle shell, what colors or patterns would you choose?",
+      open: "Imagine a rainbow shell — would it help you blend in or stand out?"
+      }
+    ]
+
 
 export default turtles;

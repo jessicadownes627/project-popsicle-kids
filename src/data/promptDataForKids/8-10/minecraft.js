@@ -31,6 +31,36 @@ const minecraft = [
     ask: ["Do you like building alone or with friends more? Why?"],
     open: ["If you created your own Minecraft server, what kind of world would it have?"]
   },
+  {
+    summary: "Some players make entire adventure maps with puzzles, traps, and hidden treasure! 🧭✨",
+    fact: "Adventure maps can tell stories — like mystery mansions or jungle temple quests.",
+    ask: ["What kind of adventure map would you make in Minecraft?"],
+    open: ["Describe the final challenge players would face at the end of your map!"]
+  },
+  {
+    summary: "You can brew potions in Minecraft that give you special powers, like breathing underwater or jumping higher! 🧪🐸",
+    fact: "Potion brewing uses ingredients like blaze powder and nether wart — just like magic recipes!",
+    ask: ["What kind of potion would you create if you could invent your own?"],
+    open: ["What secret ingredient would your potion use, and what power would it give you?"]
+  },
+  {
+    summary: "The Nether and The End are some of Minecraft’s most dangerous places — full of lava, fortresses, and flying dragons! 🐉🔥",
+    fact: "The Ender Dragon is the game’s ultimate boss — some players team up to defeat it together.",
+    ask: ["Have you ever traveled to the Nether or The End? What happened?"],
+    open: ["If you could add a new dimension to Minecraft, what would it be like?"]
+  },
+  {
+    summary: "Working together in Minecraft can make giant builds faster and more fun! 🏰🤝",
+    fact: "Some players build entire cities, amusement parks, or worlds with their friends.",
+    ask: ["What’s the biggest or coolest thing you’ve built with friends?"],
+    open: ["If your friends joined your Minecraft world right now, what would you build together?"]
+  },
+  {
+    summary: "Minecraft isn’t just building — players make parkour maps, PvP arenas, and mini-games too! 🧠🎮",
+    fact: "Some mini-games are so popular they become whole servers, like Bed Wars and Skyblock.",
+    ask: ["What’s your favorite Minecraft challenge or mini-game?"],
+    open: ["If you made a new mini-game, what would the rules and goals be?"]
+  }
 ];
 
 export default minecraft;

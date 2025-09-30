@@ -30,6 +30,36 @@ const roblox = [
     fact: "Roblox has chat filters to help keep conversations safe for kids.",
     ask: "Who do you like playing Roblox with, and what do you like to do together?",
     open: "Imagine you and your best friend create a Roblox game. What’s it about and what happens in it?"
+  },
+  {
+    summary: "Obbys are jumping courses with tricky surprises! 🧗‍♂️",
+    fact: "Some players make obbys with disappearing floors, moving platforms, and silly traps!",
+    ask: "What’s the silliest or hardest obby you’ve ever played?",
+    open: "If you made your own obby, what would the theme be? Describe the obstacles!"
+  },
+  {
+    summary: "Some Roblox games let you run your own restaurants! 🍔👩‍🍳",
+    fact: "Players can cook, take orders, decorate their space, and make their restaurant famous!",
+    ask: "If you had a Roblox restaurant, what would you serve?",
+    open: "Describe your dream restaurant in Roblox — what’s it called and what makes it special?"
+  },
+  {
+    summary: "You can give your avatar amazing superpowers in Roblox! 🦸✨",
+    fact: "Some games let you fly, run super fast, or shoot rainbows from your hands!",
+    ask: "If you could have ANY superpower in Roblox, what would it be?",
+    open: "Invent a Roblox game where everyone has a different superpower. What happens in it?"
+  },
+  {
+    summary: "Rare pets make Roblox adventures extra fun! 🐉🌟",
+    fact: "Some pets in games like Adopt Me! can fly, glow, or even help you do tricks.",
+    ask: "What’s the coolest or silliest pet you’ve ever seen in Roblox?",
+    open: "Imagine you discover a brand-new legendary pet. What does it look like and what special powers does it have?"
+  },
+  {
+    summary: "You can dress your Roblox avatar in the wildest outfits! 🧢👑👗",
+    fact: "Some players make outfits that match a theme — like beach day, superhero, or total silliness!",
+    ask: "What’s the funniest or most creative outfit you’ve seen someone wear?",
+    open: "If there was a Roblox fashion show, what would your avatar wear to win?"
   }
 ];
 
